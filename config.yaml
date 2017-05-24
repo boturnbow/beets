@@ -1,0 +1,56 @@
+directory: ~/Music/beets/
+
+import:
+  log: beetslog.txt
+  languages: en
+
+embedart:
+  remove_art_file: yes
+
+paths:
+  default: Albums/$albumartist/$album%aunique{}/$track $title
+  singleton: Singles/$artist/$title
+  albumtype:soundtrack: Soundtracks/$album/$track $title
+  comp: Compilations/$album%aunique{}/$track $title
+
+original_date: yes
+# asciify_paths: yes enable if probs
+
+smartplaylist:
+  relative_to: ~/Music/beets/
+  playlist_dir: ~/Music/beets/Playlists
+  playlists:
+    - name: beastiechill.m3u
+      query: 'playlist:beastiechill'
+    - name: countrychicks.m3u
+      query: 'playlist:countrychicks'
+    - name: freak.m3u
+      query: 'playlist:freak'
+    - name: funny.m3u
+      query: 'playlist:funny'
+    - name: singles.m3u
+      query: 'singleton:true ^genre:holiday'
+
+convert:
+  never_convert_lossy_files: yes
+
+plugins: discogs info fetchart embedart lyrics missing ftintitle smartplaylist convert
+
+# Clip Sport contains Wilco with 4 setlists, Decemberists with one setlist, Radiohead.
+# M1 contains podcasts, smart playlists, all singles, plus Christian & Gospel, Classical, Holiday, Jazz, Soundtrack.
+# M2 contains Blues and R&B.
+# M3 contains Bluegrass and Folk.
+# M4 contains Country.
+# M5 contains Comedy, Electronic, Hip Hop/Rap, Latin, New Age, Reggae, World.
+# B1 contains Alternative.
+# B2 contains Rock, Pop, Punk Rock.
+
+# sync player and cards with:
+#   python ~/Library/Application\ Support/beets/player.py
+#   python ~/Library/Application\ Support/beets/m1.py
+#   python ~/Library/Application\ Support/beets/m2.py
+#   python ~/Library/Application\ Support/beets/m3.py
+#   python ~/Library/Application\ Support/beets/m4.py
+#   python ~/Library/Application\ Support/beets/m5.py
+#   python ~/Library/Application\ Support/beets/b1.py
+#   python ~/Library/Application\ Support/beets/b2.py
