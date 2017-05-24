@@ -12,12 +12,12 @@
 Sync player and cards with:
 
 ```
-python ~/Library/Application\ Support/beets/player.py
-python ~/Library/Application\ Support/beets/b1.py
-python ~/Library/Application\ Support/beets/b2.py
-python ~/Library/Application\ Support/beets/m1.py
-python ~/Library/Application\ Support/beets/m2.py
-python ~/Library/Application\ Support/beets/m3.py
-python ~/Library/Application\ Support/beets/m4.py
-python ~/Library/Application\ Support/beets/m5.py
+$ python ~/Library/Application\ Support/beets/player.py
+$ python ~/Library/Application\ Support/beets/b1.py
+$ python ~/Library/Application\ Support/beets/b2.py
+$ python ~/Library/Application\ Support/beets/m1.py
+$ python ~/Library/Application\ Support/beets/m2.py
+$ python ~/Library/Application\ Support/beets/m3.py
+$ python ~/Library/Application\ Support/beets/m4.py
+$ python ~/Library/Application\ Support/beets/m5.py
 ```
