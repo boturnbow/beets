@@ -30,6 +30,8 @@ smartplaylist:
       query: 'playlist:funny'
     - name: singles.m3u
       query: 'singleton:true ^genre:holiday'
+    - name: new.m3u
+      query: 'added:-1m..' #added in 30 days
 
 convert:
   never_convert_lossy_files: yes

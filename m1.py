@@ -4,7 +4,7 @@ print("M1 contains podcasts, smart playlists, all singles, plus Christian & Gosp
 
 card_name = "M1"
 card_dir = "/Volumes/%s/Music/" % card_name
-query = "playlist::'.+', singleton:true, genre:'Christian & Gospel', genre:Classical, genre:Holiday, genre:Jazz, albumtype:soundtrack"
+query = "playlist::'.+', added:-1m.., singleton:true, genre:'Christian & Gospel', genre:Classical, genre:Holiday, genre:Jazz, albumtype:soundtrack"
 
 call("beet stats %s" % query, shell=True)
 
